@@ -3,10 +3,10 @@
 # Put your code here
 #greet player
 
-name = "Anna";
+name = input("Hello! What is your name? (type in our name): ");
 
-
-print(name, "I'm thinking of a number between 1 and 100. Try to guess my number.")
+new_line = '\n'
+print(f"{name}, I'm thinking of a number between 1 and 100.{new_line}Try to guess my number.")
 number = int(input("Your guess: ")) 
 correct_guess = 90
 guess_count = 0
@@ -14,10 +14,9 @@ Isguess = False
 while (Isguess == False):
     guess_count += 1
     if number == correct_guess:
-        print(f'Well done {name}! You found my number in {guess_count} tries.')
+        print(f"Well done {name}! You found my number in {guess_count} tries.")
         Isguess = True
         guess_count = 0
-        
         break
     elif number > correct_guess:
         print("Your guess is too high. Try again.")
